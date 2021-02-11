@@ -77,13 +77,16 @@ public class University implements Details{
     }
 
     // Функция возвращает список лучших студентов с их именнами как Строку.
-//    public void showBestStudents() {
-//        TreeMap<String> bestStudents = new TreeMap<>();  // <-- FIX
-//        for (Student student : bestStudents()) {
-//            bestStudents.(student.getFirstLastNames());
-//        }
-//        System.out.println(bestStudents.toString());
-//    }
+    public void showBestStudents() {
+        TreeMap<Double, Student> bestStudents = new TreeMap<>();  
+        for (Student student : bestStudents()) {
+            double marks = student.getGPA();
+            if (marks >= 90.0)
+                bestStudents.put(marks, student);
+        }
+        System.out.println(bestStudents.toString());
+    }
+
 
     //Метод ищет студента по номеру заликовки
     // Тут бы добавить еще проверку на правильность введения номер зачетки
@@ -110,7 +113,7 @@ public class University implements Details{
                         "\nКоличество учеников: " + countStudents()
         );
     }
-    
+
 
     private String getStringOfFaculties() {
         //  StringBuilder allFaculties = new StringBuilder();

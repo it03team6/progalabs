@@ -30,6 +30,11 @@ public class Student implements Details{
         this.GPA = GPA;
     }
 
+    @Override
+    public String toString() {
+        return  "ФИО:" + firstLastNames;
+    }
+
     public Faculty getFaculty() {
         return faculty;
     }

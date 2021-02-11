@@ -10,7 +10,7 @@ public class Main {
         Student nickita = new Student("Nick Phil", "ZXCV9012", 99.8, FICT);
 
 
-        //KPI.showBestStudents();
+        KPI.showBestStudents();
         System.out.println(KPI.countStudents());
         KPI.mostStudents();
         KPI.findStudent("AE333333");
